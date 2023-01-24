@@ -1,19 +1,16 @@
 package HotelRoomandCost;
 
-import java.util.jar.Attributes.Name;
-
 public class HotelRoom {
-	private String Custname;
-	private String Custphone;
-	private String hotelName;
-	private int numberOfSqFeet;
+
+	private String customerName;
+	private int numberOfDay;
 	private boolean hasTV;
 	private boolean hasWifi;
 
-	public HotelRoom(String hotelName, int numberOfSqFeet, boolean hasTV, boolean hasWifi) {
+	public HotelRoom(String customerName, int numberOfDay, boolean hasTV, boolean hasWifi) {
 		super();
-		this.hotelName = hotelName;
-		this.numberOfSqFeet = numberOfSqFeet;
+		this.customerName = customerName;
+		this.numberOfDay = numberOfDay;
 		this.hasTV = hasTV;
 		this.hasWifi = hasWifi;
 	}
@@ -22,36 +19,20 @@ public class HotelRoom {
 
 	}
 
-	public void setname(String Custname) {
-		this.Custname = Custname;
+	public String getCustomerName() {
+		return customerName;
 	}
 
-	public String getCustName() {
-		return Custname;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
-	public void setPhone(String Custphone) {
-		this.Custphone = Custphone;
+	public int getNumberOfDay() {
+		return numberOfDay;
 	}
 
-	public String getCustPhone() {
-		return Custphone;
-	}
-
-	public String getHotelName() {
-		return hotelName;
-	}
-
-	public void setHotelName(String hotelName) {
-		this.hotelName = hotelName;
-	}
-
-	public int getNumberOfSqFeet() {
-		return numberOfSqFeet;
-	}
-
-	public void setNumberOfSqFeet(int numberOfSqFeet) {
-		this.numberOfSqFeet = numberOfSqFeet;
+	public void setNumberOfDay(int numberOfDay) {
+		this.numberOfDay = numberOfDay;
 	}
 
 	public boolean isHasTV() {
@@ -71,10 +52,10 @@ public class HotelRoom {
 	}
 
 	public int calculateTariff() {
-		return numberOfSqFeet * getRatePerSqFeet();
+		return numberOfDay * getRatePerDay();
 	}
 
-	public int getRatePerSqFeet() {
+	public int getRatePerDay() {
 		return 0;
 	}
 

@@ -10,11 +10,12 @@ import javax.swing.JTextField;
 
 import java.awt.event.ActionEvent;
 
-public class Hotel_List_GUI {
-    String Answer;
-    Hotel_List_Return hotellist = new Hotel_List_Return();
+public class Room_List_GUI {
 
-    Hotel_List_GUI() {
+    String Answer;
+    Room_List_Return room = new Room_List_Return();
+
+    Room_List_GUI() {
 
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
@@ -25,23 +26,23 @@ public class Hotel_List_GUI {
 
         panel.setLayout(null);
 
-        JLabel menu = new JLabel("MENU");
-        menu.setBounds(120, 10, 100, 25);
+        JLabel menu = new JLabel("ROOM MENU ");
+        menu.setBounds(100, 10, 100, 25);
         panel.add(menu);
 
-        JLabel listofhotel = new JLabel("List of Hotel");
-        listofhotel.setBounds(100, 30, 200, 25);
-        panel.add(listofhotel);
+        JLabel listofroom = new JLabel("List of Room");
+        listofroom.setBounds(100, 30, 200, 25);
+        panel.add(listofroom);
 
-        JLabel firstchoice = new JLabel("A) U Hotel ");
+        JLabel firstchoice = new JLabel("A) Deluxe Room ");
         firstchoice.setBounds(20, 50, 100, 25);
         panel.add(firstchoice);
 
-        JLabel secondchoice = new JLabel("B) Hotel Meridion ");
+        JLabel secondchoice = new JLabel("B) Standard Room ");
         secondchoice.setBounds(20, 70, 200, 25);
         panel.add(secondchoice);
 
-        JLabel thirdchoice = new JLabel("C) IOI City Hotel ");
+        JLabel thirdchoice = new JLabel("C) Suite Room");
         thirdchoice.setBounds(20, 90, 100, 25);
         panel.add(thirdchoice);
 
@@ -60,7 +61,7 @@ public class Hotel_List_GUI {
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Answer = userinput.getText();
-                hotellist.sethotelname(Answer);
+                room.setroomname(Answer);
                 frame.dispose();
             }
         });
@@ -69,8 +70,7 @@ public class Hotel_List_GUI {
 
     }
 
-    public String getname() {
-        return hotellist.gethotelname();
+    public String getroomname() {
+        return room.getroomname();
     }
-
 }

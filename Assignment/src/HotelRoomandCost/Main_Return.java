@@ -2,11 +2,11 @@ package HotelRoomandCost;
 
 import javax.swing.*;
 
-public class Main_Test extends JFrame {
+public class Main_Return extends JFrame {
     String name;
     String phone;
 
-    public Main_Test() {
+    public Main_Return() {
 
     }
 
