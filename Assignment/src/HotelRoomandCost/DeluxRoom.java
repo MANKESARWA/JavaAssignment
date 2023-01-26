@@ -1,25 +1,21 @@
 package HotelRoomandCost;
 
-public class DeluxRoom extends HotelRoom{
-	
-	private int ratePerSqFeet;
+public class DeluxRoom extends HotelRoom {
 
-	public DeluxRoom(String hotelName, int numberOfSqFeet, boolean hasTV, boolean hasWifi, int ratePerSqFeet) {
-		super(hotelName, numberOfSqFeet, hasTV, hasWifi);
-		this.ratePerSqFeet = 10;
+	private int ratePerDay;
+
+	public DeluxRoom(String customerName, int numberOfDay, boolean hasTV, boolean hasWifi, int ratePerDay) {
+		super(customerName, numberOfDay, hasTV, hasWifi);
+		this.ratePerDay = 100;
 	}
-	
-	
 
-	HotelRoom hotelRoom =  new HotelRoom();
-	public int getRatePerSqFeet()
-	{
-		
-		if(isHasWifi())
-		{
-			return (ratePerSqFeet+2);
+	HotelRoom hotelRoom = new HotelRoom();
+
+	public int getRatePerDay() {
+
+		if (isHasWifi()) {
+			return (ratePerDay + 2);
 		}
-		return ratePerSqFeet;
+		return ratePerDay;
 	}
-	
 }

@@ -1,39 +1,38 @@
 package HotelRoomandCost;
 
 public class HotelRoom {
-	
-	private String hotelName;
-	private int numberOfSqFeet;
+
+	private String customerName;
+	private int numberOfDay;
 	private boolean hasTV;
 	private boolean hasWifi;
-	
-	public HotelRoom(String hotelName, int numberOfSqFeet, boolean hasTV, boolean hasWifi) {
+
+	public HotelRoom(String customerName, int numberOfDay, boolean hasTV, boolean hasWifi) {
 		super();
-		this.hotelName = hotelName;
-		this.numberOfSqFeet = numberOfSqFeet;
+		this.customerName = customerName;
+		this.numberOfDay = numberOfDay;
 		this.hasTV = hasTV;
 		this.hasWifi = hasWifi;
 	}
-	
+
 	public HotelRoom() {
 
 	}
-	
-		
-	public String getHotelName() {
-		return hotelName;
+
+	public String getCustomerName() {
+		return customerName;
 	}
 
-	public void setHotelName(String hotelName) {
-		this.hotelName = hotelName;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
-	public int getNumberOfSqFeet() {
-		return numberOfSqFeet;
+	public int getNumberOfDay() {
+		return numberOfDay;
 	}
 
-	public void setNumberOfSqFeet(int numberOfSqFeet) {
-		this.numberOfSqFeet = numberOfSqFeet;
+	public void setNumberOfDay(int numberOfDay) {
+		this.numberOfDay = numberOfDay;
 	}
 
 	public boolean isHasTV() {
@@ -52,15 +51,12 @@ public class HotelRoom {
 		this.hasWifi = hasWifi;
 	}
 
-	public int calculateTariff()
-	{
-		return numberOfSqFeet*getRatePerSqFeet();
+	public int calculateTariff() {
+		return numberOfDay * getRatePerDay();
 	}
-	
-	public int getRatePerSqFeet()
-	{
+
+	public int getRatePerDay() {
 		return 0;
 	}
-	
-	
+
 }
